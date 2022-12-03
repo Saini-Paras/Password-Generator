@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    font-family: 'Montserrat', sans-serif;
+
+}
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --clr-red:#f74b4b;
+    --clr-yellow:#f8cb63;
+    --clr-orange:#fb7a56;
+    --clr-primary:#a3ffae;
+    --clr-grey:#23222a;
+    --clr-light-grey:#807c92;
+    --clr-dark-grey:#191820;
+    --clr-black:#08070b;
+    --clr-white:#fff
+}
+
+main{
+    max-width: 450px;
+    min-height: 60rem;
+    width: 90%;
+}
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--clr-light-grey);
+    margin-bottom: 2rem;
+}
+.input__area,.output__area{
+    background-color: var(--clr-grey);
+    padding: 0 2.5rem;
+    font-size: 1.45rem;
+}
+.copy{
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.copied__text{
+    position: absolute;
+    right: 1.2rem;
+    bottom: .8rem;
+    color: var(--clr-primary);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: none;
+
+}
+.output__area{
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.passInput{
+    background-color: var(--clr-grey);
+    border: none;
+    font-size: 2.2rem;
+    outline: none;
+    color: var(--clr-white);
+    width: 90%;
+}
+.input__area{
+    height:50rem ;
+    margin-top: 2rem;
+    padding: 2.5rem;
+}
+.character__length{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.characters{
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+}
+.character__lenght-bar{
+    width: 100%;
+    height: .6rem;
+    background-color: var(--clr-dark-grey);
+    margin-top: 2rem;
+    accent-color: var(--clr-primary);
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+}
+.character__lenght-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 2px solid var(--clr-primary);
+    border-radius: 50%;
+    z-index: 99;
+    background-color: #a3ffae;
+    transition: all .2s ease;
+}
+.character__lenght-bar:hover::-webkit-slider-thumb,.character__lenght-bar:active::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: var(--clr-dark-grey);
+}
+.checkbox__container{
+    margin-top: 3rem;    
+}
+.checkbox{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+.checkbox label{
+    font-size: 1.8rem;
+    margin-left: 1.3rem;
+}
+.checkbox input{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    accent-color: var(--clr-primary);
+}
+.strength__container{
+    background-color: var(--clr-dark-grey);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.strength-box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.strength__bars{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.strength__container h3{
+    color: var(--clr-light-grey);
+    font-size: 1.55rem;
+}
+.strength-box h2{
+    font-size: 1.9rem;
+}
+.bar{
+    border: 2px solid var(--clr-white);
+    width: 1.1rem;
+    height: 2.6rem;
+}
+.btn{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    cursor: pointer;
+    font-size: 1.55rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all .2s ease;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.btn:hover{
+    background: transparent;
+    color: var(--clr-primary);
+}
+.btn span i{
+    font-size: 2.3rem;
+}
+
+
+@media screen and (max-width:450px) {
+    html{
+        font-size: 55%;
+    }
+    .strength-box h2{
+        font-size: 1.6rem;
+    }
+    .bar{
+        width: .9rem;
+        border: 1px solid var(--clr-white);
+    }
+    .passInput{
+        font-size: 2rem;
+    }
+    .input__area,.output__area{
+        padding: 2.5rem 2.2rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    main{
+        margin-top: -6rem;
+    }
+}
+@media screen and (max-width:300px) {
+    html{
+        font-size: 49%;
+    }
+    main{
+        min-height: 60rem;
+        margin-top: 0;
+    }
+    .input__area{
+    }
+}
+@media (min-height:1100px) {
+    html{
+        font-size: 100%;
+    }
+    main{
+        max-width: 650px;
+    }
+}

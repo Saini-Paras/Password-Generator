@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css" />
+    <!--icon scout link  -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- js file -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <!--? heading -->
+      <h3 class="heading">Password Generator</h3>
+      <!--? output area -->
+      <div class="output__area">
+        <input type="text" name="" class="passInput" placeholder="Password" readonly>
+        <h3 class="copied__text">Copied</h3>
+        <i class="uil uil-copy-alt copy"></i>
+        <!-- <button class="copy">copy</button> -->
+      </div>
+      <!--? input area -->
+      <div class="input__area">
+        <!--? character length box -->
+        <div class="character__length">
+          <h3>Character length</h3>
+          <h2 class="characters">8</h2>
+        </div>
+        <!--? character range bar -->
+        <input
+          type="range"
+          name="character-length"
+          class="character__lenght-bar"
+          min="0"
+          max="20"
+          value="8"
+        />
+        <!--? checkbox container -->
+        <div class="checkbox__container">
+          <!--? checkbox -->
+          <div class="checkbox" >
+            <input type="checkbox" name="checkbox" id="uppercase" class="upperCharacters" />
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+          <!--? checkbox -->
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="lowercase" class="lowerCharacters" />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+          <!--? checkbox -->
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="numbers" class="numbers" />
+            <label for="numbers">Include Numbers</label>
+          </div>
+          <!--? checkbox -->
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="symbols" class="symbols" />
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </div>
+        <!--? strength container -->
+        <div class="strength__container">
+          <h3>STRENGTH</h3>
+          <div class="strength-box">
+            <h2 class="strength"></h2>
+            <div class="strength__bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="btn">
+          GENERATE <span><i class="uil uil-arrow-right"></i></span>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
